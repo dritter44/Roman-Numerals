@@ -16,11 +16,12 @@ exports.toRoman = function(num) {
       "I": 1,  
     };
       for (let key in obj){
-        while (num >= obj[key]){
+        if (num >= obj[key]){
           romanNum += key
           num -= obj[key];
-        
+          //console.log(num);
         }
     }
     return romanNum;
   }
+  console.log(toRoman(99));
